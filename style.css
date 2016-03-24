@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body, p, h1, h3 {
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+h1 {
+	padding: 1em 0;
+	background-color: #ffa500;
+	color: #4a4a4a;
+	text-align: center;
+}
+
+section {
+	padding: 1em 5em;
+	background: #e3e3e3;
+	border-bottom: 1px solid #4a4a4a;
+}
+
+.title {
+	color: #7D4B00;
+}
+
+.description {
+	margin-bottom: 1em;
+	color: #4a4a4a;
+}
