@@ -35,30 +35,24 @@ var fibonachiSum = function (limit) {
 }
 
 var largestPrime = function (limit) {
-
 	var divisor = 2;
-	var divisors = [];
-	while (limit > 1) {
-		while (limit % divisor === 0) {
+	while (!isPrime(limit)) {
+		while (limit / divisor != 1 && limit % divisor === 0) {
 			limit /= divisor;
-			if (isPrime(limit)) {
-				return limit;
-			}
 		}
 		divisor++;
 	}
-
 	return limit;
 }
 
 var isPrime = function (n) {
- if (n == 1) return true; 
- if (n%2==0) return (n==2);
- if (n%3==0) return (n==3);
- var m = Math.sqrt(n);
- for (var i = 5; i <= m; i += 6) {
- 	if (n % i == 0)     return false;
- 	if (n % (i + 2) == 0) return false;
- }
- return true;
+	if (n == 1) return true; 
+	if (n % 2 == 0) return (n == 2);
+	if (n % 3 == 0) return (n == 3);
+	var m = Math.sqrt(n);
+	for (var i = 5; i <= m; i += 6) {
+		if (n % i == 0)     return false;
+		if (n % (i + 2) == 0) return false;
+	}
+	return true;
 }
